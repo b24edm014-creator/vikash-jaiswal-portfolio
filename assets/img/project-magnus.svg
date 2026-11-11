@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="magnusBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f3ff"/>
+      <stop offset="100%" stop-color="#ede9fe"/>
+    </linearGradient>
+    <filter id="physicsShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#8b5cf6" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#magnusBg)"/>
+
+  <!-- Physical demonstration graphic -->
+  <g transform="translate(60, 40)" filter="url(#physicsShadow)">
+    <rect x="0" y="0" width="480" height="260" rx="16" fill="#ffffff" stroke="#ddd6fe" stroke-width="2"/>
+
+    <!-- Spinning Cylinder / Ball -->
+    <g transform="translate(240, 130)">
+      <circle cx="0" cy="0" r="45" fill="#8b5cf6"/>
+      <!-- Rotation arrow -->
+      <path d="M -25,-25 A 35 35 0 1 1 25,25" fill="none" stroke="#fbcfe8" stroke-width="4" stroke-linecap="round"/>
+      <polygon points="25,25 32,15 20,18" fill="#fbcfe8"/>
+      <text x="-16" y="6" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="16" fill="#ffffff">Spin</text>
+
+      <!-- Lift Force Arrow (Upwards) -->
+      <line x1="0" y1="-50" x2="0" y2="-100" stroke="#f97316" stroke-width="4" marker-end="url(#orangeArrow)"/>
+      <polygon points="0,-105 -8,-90 8,-90" fill="#f97316"/>
+      <text x="12" y="-85" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="14" fill="#ea580c">LIFT (F_L)</text>
+    </g>
+
+    <!-- Streamlines (Air Flow from left to right) -->
+    <!-- Top Streamlines (High velocity, Low pressure) -->
+    <path d="M 40,65 Q 180,65 240,40 T 440,75" fill="none" stroke="#0284c7" stroke-width="3"/>
+    <path d="M 40,85 Q 190,85 240,65 T 440,95" fill="none" stroke="#0284c7" stroke-width="2.5"/>
+    <text x="270" y="30" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="12" fill="#0369a1">Low Pressure (High Speed)</text>
+
+    <!-- Bottom Streamlines (Low velocity, High pressure) -->
+    <path d="M 40,175 Q 190,175 240,195 T 440,215" fill="none" stroke="#10b981" stroke-width="2.5"/>
+    <path d="M 40,195 Q 180,195 240,215 T 440,235" fill="none" stroke="#10b981" stroke-width="3"/>
+    <text x="260" y="240" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="12" fill="#047857">High Pressure (Low Speed)</text>
+
+    <!-- Left air direction -->
+    <text x="30" y="135" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="13" fill="#64748b">Airflow ➔</text>
+  </g>
+
+  <!-- Bottom Tag Pill -->
+  <g transform="translate(50, 325)">
+    <rect x="0" y="0" width="180" height="42" rx="21" fill="#8b5cf6"/>
+    <text x="18" y="26" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Physics Education</text>
+  </g>
+  <text x="250" y="352" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#6d28d9">Hands-on STEM Activity • Aerodynamics</text>
+</svg>
+

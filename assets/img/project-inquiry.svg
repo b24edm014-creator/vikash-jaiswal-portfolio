@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="inquiryBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5"/>
+      <stop offset="100%" stop-color="#d1fae5"/>
+    </linearGradient>
+    <filter id="boardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#059669" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#inquiryBg)"/>
+
+  <!-- The Inquiry Board Frame -->
+  <g transform="translate(40, 40)" filter="url(#boardShadow)">
+    <rect x="0" y="0" width="520" height="260" rx="16" fill="#ffffff" stroke="#10b981" stroke-width="3"/>
+    
+    <!-- Quadrant Dividers -->
+    <line x1="260" y1="20" x2="260" y2="240" stroke="#a7f3d0" stroke-width="3" stroke-dasharray="6,4"/>
+    <line x1="20" y1="130" x2="500" y2="130" stroke="#a7f3d0" stroke-width="3" stroke-dasharray="6,4"/>
+
+    <!-- Quadrant 1: Question & Wonder -->
+    <rect x="25" y="25" width="220" height="95" rx="10" fill="#f0fdf4"/>
+    <circle cx="45" cy="45" r="14" fill="#10b981"/>
+    <text x="40" y="50" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="14" fill="#ffffff">?</text>
+    <text x="68" y="48" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="14" fill="#065f46">1. Notice &amp; Wonder</text>
+    <text x="40" y="80" font-family="'Segoe UI', sans-serif" font-size="12" fill="#047857">What patterns do you observe?</text>
+    <text x="40" y="98" font-family="'Segoe UI', sans-serif" font-size="12" fill="#047857">Formulating questions...</text>
+
+    <!-- Quadrant 2: Hypothesize & Model -->
+    <rect x="275" y="25" width="220" height="95" rx="10" fill="#f0fdfa"/>
+    <circle cx="295" cy="45" r="14" fill="#0284c7"/>
+    <text x="290" y="50" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="14" fill="#ffffff">💡</text>
+    <text x="318" y="48" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="14" fill="#075985">2. Mathematical Model</text>
+    <text x="290" y="80" font-family="'Segoe UI', sans-serif" font-size="12" fill="#0369a1">Variables: x, y, f(x)</text>
+    <text x="290" y="98" font-family="'Segoe UI', sans-serif" font-size="12" fill="#0369a1">Hypothesis testing &amp; graphs</text>
+
+    <!-- Quadrant 3: Experiment & Verify -->
+    <rect x="25" y="145" width="220" height="95" rx="10" fill="#fffbeb"/>
+    <circle cx="45" cy="165" r="14" fill="#f59e0b"/>
+    <text x="39" y="170" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="14" fill="#ffffff">⚙</text>
+    <text x="68" y="168" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="14" fill="#92400e">3. Active Experiment</text>
+    <text x="40" y="200" font-family="'Segoe UI', sans-serif" font-size="12" fill="#b45309">Manipulatives &amp; Data points</text>
+    <text x="40" y="218" font-family="'Segoe UI', sans-serif" font-size="12" fill="#b45309">Trial 1, 2, 3 verification</text>
+
+    <!-- Quadrant 4: Conceptual Synthesis -->
+    <rect x="275" y="145" width="220" height="95" rx="10" fill="#faf5ff"/>
+    <circle cx="295" cy="165" r="14" fill="#8b5cf6"/>
+    <text x="289" y="170" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="14" fill="#ffffff">✨</text>
+    <text x="318" y="168" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="14" fill="#5b21b6">4. Concept Reflection</text>
+    <text x="290" y="200" font-family="'Segoe UI', sans-serif" font-size="12" fill="#6d28d9">Synthesis: Core principle</text>
+    <text x="290" y="218" font-family="'Segoe UI', sans-serif" font-size="12" fill="#6d28d9">Generalizing to new contexts</text>
+  </g>
+
+  <!-- Bottom Tag Pill -->
+  <g transform="translate(50, 325)">
+    <rect x="0" y="0" width="230" height="42" rx="21" fill="#10b981"/>
+    <text x="18" y="26" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Teaching-Learning Resource</text>
+  </g>
+  <text x="300" y="352" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#065f46">Hands-on Structured Inquiry • Pedagogy</text>
+</svg>
+

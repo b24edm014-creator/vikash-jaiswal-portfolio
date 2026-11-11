@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="scratchBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f3ff"/>
+      <stop offset="100%" stop-color="#ede9fe"/>
+    </linearGradient>
+    <linearGradient id="blockOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="blockBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="blockPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="trajGrad" x1="0%" y1="100%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#8b5cf6" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#scratchBg)"/>
+  
+  <!-- Subtle Grid lines -->
+  <g stroke="#ddd6fe" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="450" y1="0" x2="450" y2="400"/>
+  </g>
+
+  <!-- Left: Scratch Code Blocks -->
+  <g transform="translate(30, 45)" filter="url(#cardShadow)">
+    <!-- Event Block -->
+    <path d="M 10,10 C 25,-2 55,-2 70,10 L 250,10 A 8,8 0 0,1 258,18 L 258,52 A 8,8 0 0,1 250,60 L 110,60 L 102,68 L 82,68 L 74,60 L 10,60 A 8,8 0 0,1 2,52 L 2,18 A 8,8 0 0,1 10,10 Z" fill="url(#blockOrange)"/>
+    <text x="18" y="38" font-family="'Segoe UI', Roboto, sans-serif" font-weight="bold" font-size="13" fill="#ffffff">🏁 when green flag clicked</text>
+
+    <!-- Block 1: Velocity components -->
+    <path d="M 10,60 L 74,60 L 82,68 L 102,68 L 110,60 L 250,60 A 8,8 0 0,1 258,68 L 258,102 A 8,8 0 0,1 250,110 L 110,110 L 102,118 L 82,118 L 74,110 L 10,110 A 8,8 0 0,1 2,102 L 2,68 A 8,8 0 0,1 10,60 Z" fill="url(#blockBlue)"/>
+    <text x="18" y="90" font-family="'Segoe UI', Roboto, sans-serif" font-weight="bold" font-size="12" fill="#ffffff">set [v_x] to ((v) * (cos(θ)))</text>
+
+    <!-- Block 2: Vertical component -->
+    <path d="M 10,110 L 74,110 L 82,118 L 102,118 L 110,110 L 250,110 A 8,8 0 0,1 258,118 L 258,152 A 8,8 0 0,1 250,160 L 110,160 L 102,168 L 82,168 L 74,160 L 10,160 A 8,8 0 0,1 2,152 L 2,118 A 8,8 0 0,1 10,110 Z" fill="url(#blockBlue)"/>
+    <text x="18" y="140" font-family="'Segoe UI', Roboto, sans-serif" font-weight="bold" font-size="12" fill="#ffffff">set [v_y] to ((v) * (sin(θ)))</text>
+
+    <!-- Block 3: Gravity update in loop -->
+    <path d="M 10,160 L 74,160 L 82,168 L 102,168 L 110,160 L 250,160 A 8,8 0 0,1 258,168 L 258,206 A 8,8 0 0,1 250,214 L 110,214 L 102,222 L 82,222 L 74,214 L 10,214 A 8,8 0 0,1 2,206 L 2,168 A 8,8 0 0,1 10,160 Z" fill="url(#blockPurple)"/>
+    <text x="18" y="193" font-family="'Segoe UI', Roboto, sans-serif" font-weight="bold" font-size="12" fill="#ffffff">change [v_y] by (-g * dt)</text>
+  </g>
+
+  <!-- Right: Simulation Graphic (Parabolic Trajectory) -->
+  <g transform="translate(305, 45)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="265" height="230" rx="16" fill="#ffffff" stroke="#c4b5fd" stroke-width="2"/>
+    
+    <!-- Ground Line -->
+    <line x1="20" y1="190" x2="245" y2="190" stroke="#64748b" stroke-width="2"/>
+    <text x="210" y="206" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#64748b">Range (R)</text>
+
+    <!-- Parabolic trajectory -->
+    <path d="M 35,190 Q 125,25 220,190" fill="none" stroke="url(#trajGrad)" stroke-width="3.5" stroke-dasharray="5,4"/>
+
+    <!-- Cannon / Launch Point -->
+    <circle cx="35" cy="190" r="7" fill="#475569"/>
+    
+    <!-- Velocity Vector at Launch -->
+    <line x1="35" y1="190" x2="75" y2="135" stroke="#f97316" stroke-width="2.5"/>
+    <polygon points="78,131 71,142 81,140" fill="#f97316"/>
+    <text x="70" y="125" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#ea580c">v (launch)</text>
+    <text x="48" y="182" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#ea580c">θ</text>
+
+    <!-- Peak / Maximum Height -->
+    <circle cx="125" cy="107" r="7" fill="#8b5cf6"/>
+    <line x1="125" y1="107" x2="125" y2="190" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="133" y="135" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#7c3aed">H_max</text>
+
+    <!-- Landing Point -->
+    <circle cx="220" cy="190" r="5" fill="#10b981"/>
+
+    <!-- Gravity Vector -->
+    <line x1="160" y1="80" x2="160" y2="105" stroke="#ef4444" stroke-width="2"/>
+    <polygon points="160,110 156,102 164,102" fill="#ef4444"/>
+    <text x="168" y="98" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#ef4444">g (gravity)</text>
+  </g>
+
+  <!-- Bottom Tag Pill -->
+  <g transform="translate(40, 325)">
+    <rect x="0" y="0" width="230" height="42" rx="21" fill="#8b5cf6"/>
+    <text x="18" y="26" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Physics • Scratch Model</text>
+  </g>
+  <text x="290" y="352" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#4c1d95">Projectile Motion &amp; Parabolic Trajectory</text>
+</svg>
